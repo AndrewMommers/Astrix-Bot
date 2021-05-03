@@ -1,7 +1,7 @@
 module.exports = {
     name: 'info',
     description: "Shows Information", 
-    execute(message, args, Discord, DiscordMessageEmbed) {
+    execute(message, args, Discord) {
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#680000')
         .setTitle('Information')

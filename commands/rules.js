@@ -6,7 +6,7 @@ module.exports = {
         .setColor('#680000')
         .setTitle('Rules')
         .addFields(
-            {name: '1', value: 'All Disord Terms of Service Apply - https://discordapp.com/terms'},
+            {name: '1', value: 'All Disord Terms of Service Apply - https://discordapp.com/terms',},
             {name: '2', value: 'No Harrasment of anykind.'},
             {name: '3', value: 'No Spamming.'},
             {name: '4', value: 'Self promotion such as twitch, youtube, ect. is allowed in #self-promotion. However, Discord servers and other communites are not allowed.'},

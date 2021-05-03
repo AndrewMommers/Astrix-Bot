@@ -7,6 +7,7 @@ const client = new Client({partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'USER', 
 const PREFIX = process.env.PREFIX;
 const fs = require('fs');
 const prefix = '!';
+const roleClaim = require('./role-claim')
 
 client.commands = new Collection();
 
@@ -20,6 +21,8 @@ console.log('Bot is now Starting!');
 client.on('ready', async() => {
     console.log(`${client.user.tag} Has Successfully Started!`);
     client.user.setActivity(`${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Members`, {type: 'WATCHING' });
+
+    roleClaim(client)
 })
 
 const commandFiles =fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -98,6 +101,11 @@ client.on('message', message =>{
             
         } if (command === 'staff-commands') {
             client.commands.get('staff-commands').execute(message, args);
+            
+        } else {
+
+        } if (command === 'reactions') {
+            client.commands.get('reactions').execute(message, args);
             
         } else {
     }
